@@ -15,7 +15,7 @@ def call(){
   }
   stage("Paso 4: Sonar - Análisis Estático"){
       sh "echo 'Análisis Estático!'"
-      withSonarQubeEnv('sonarqube') {
+      withSonarQubeEnv('sonarqube3') {
           sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=ejemplo-gradle -Dsonar.java.binaries=build'
       }
   }
